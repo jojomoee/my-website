@@ -1,0 +1,29 @@
+$black: #191919;
+$white: #d9d9d9;
+$green: #6dbc60;
+
+@mixin font-face($family, $file) {
+  @font-face {
+    font-family: $family;
+    src: url($file + '.eot');
+    src: url($file + '.woff') format('woff'),
+      url($file + '.woff2') format('woff2'), url($file + '.woff') format('woff'),
+      url($file + '.ttf') format('truetype'), url($file + '.svg') format('svg');
+  }
+}
+@include font-face(
+  'SM-E',
+  '../assets/fonts/Etroit/Solide_Mirage-Etroit_web'
+);
+
+body {
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+}
