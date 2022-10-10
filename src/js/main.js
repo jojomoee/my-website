@@ -1,8 +1,8 @@
 import './../scss/style.scss';
+import gsap from 'gsap';
 import { animationCloseOpen } from './components/menu';
 
-document.querySelector('#app').innerHTML = `
-`;
+animationCloseOpen();
 
 //<button id="counter" type="button"></button>
 //setupCounter(document.querySelector('#counter'));

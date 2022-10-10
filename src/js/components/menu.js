@@ -1,11 +1,10 @@
+import gsap from 'gsap';
+import {$} from '../utilities';
+
 export function animationCloseOpen() {
-
-  let menu = document.getElementById('menu');
-  let state;
-
-  menu.addEventListener('click', () => {
-    menu.style.backgroundImage = 'url(./../../assets/close.svg)';
-	state == true;
+  let menu = $('menu');
+  console.log(menu);
+  gsap.to('#menu.selected', {
+    x: 200,
   });
-
 }

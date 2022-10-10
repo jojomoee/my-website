@@ -1,5 +1,8 @@
 @mixin buttonbackground {
   background-color: transparent;
-  background-size: 100% 100%;
+  background-image: url('../../src/assets/close.svg');
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
 }
