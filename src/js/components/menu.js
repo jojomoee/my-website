@@ -7,13 +7,13 @@ export function animationCloseOpen() {
   menu.addEventListener('click', backgroundAnimation);
 
   const tl = gsap.timeline();
-  tl.from(
-    '#menu-background',
-    {
-      visibility: 'hidden',
-    },
-    0
-  );
+
+  tl.to('#menu-background', 0.4, {
+    visibility: 'visible',
+    rotation: 180,
+	scale: 4,  
+    ease: 'back.out(1.3)',
+  });
   tl.reversed(true);
 
   function backgroundAnimation() {
