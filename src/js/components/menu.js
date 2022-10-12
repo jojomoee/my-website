@@ -1,10 +1,22 @@
 import gsap from 'gsap';
-import {$} from '../utilities';
+import { $ } from '../utilities';
 
 export function animationCloseOpen() {
   let menu = $('menu');
-  console.log(menu);
-  gsap.to('#menu.selected', {
-    x: 200,
-  });
+
+  menu.addEventListener('click', backgroundAnimation);
+
+  const tl = gsap.timeline();
+  tl.from(
+    '#menu-background',
+    {
+      visibility: 'hidden',
+    },
+    0
+  );
+  tl.reversed(true);
+
+  function backgroundAnimation() {
+    tl.reversed(!tl.reversed());
+  }
 }

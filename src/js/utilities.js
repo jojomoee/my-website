@@ -1,3 +1,5 @@
+
+
 export function $(selector, parent) {
-  return (parent ? parent : document).querySelector(selector);
+  return (parent ? parent : document).getElementById(selector);
 }
