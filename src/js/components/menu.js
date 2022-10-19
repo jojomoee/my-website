@@ -17,7 +17,7 @@ export function animationCloseOpen() {
     rotation: 180,
     transformOrigin: '50% 50%',
     ease: 'back.out(1.3)',
-    scale: 0.9,
+    scale: 2,
   });
 
   tl.to('.path1', 0.4, {
@@ -32,8 +32,12 @@ export function animationCloseOpen() {
 
   const tl2 = gsap.timeline();
 
-  tl2.to('#menu', 100, {
-    rotation: 999,
+  tl2.set('#menu', {
+    scale: 2,
+  });
+
+  tl2.to('#menu', 250, {
+    rotation: 2000,
     transformOrigin: '50% 50%',
   });
 }
