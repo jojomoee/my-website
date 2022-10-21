@@ -1,5 +1,8 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { $ } from '../utilities';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function animationCloseOpen() {
   let menu = $('menu');
@@ -40,4 +43,17 @@ export function animationCloseOpen() {
     rotation: 2000,
     transformOrigin: '50% 50%',
   });
+
+  const tlScroll = gsap.timeline();
+
+  ScrollTrigger.addEventListener('scrollStart', () =>
+    tlScroll
+      .to('#menu', {
+        autoAlpha: 1,
+        duration: 3,
+      })
+      .to('#menu', {
+        autoAlpha: 0,
+      })
+  );	
 }
