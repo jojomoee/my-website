@@ -13,6 +13,7 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "@gsap/shockingly": "^3.11.3"
+    "@gsap/shockingly": "^3.11.3",
+    "gsap": "npm:@gsap/shockingly@^3.11.3"
   }
 }
